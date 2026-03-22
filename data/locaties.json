@@ -1,1 +1,22 @@
-{"locaties":[{"id":1,"naam":"Bibliotheek","beschrijving":"Centrale bibliotheek van de campus"},{"id":2,"naam":"Aula","beschrijving":"Auditorum voor events en lezingen"},{"id":3,"naam":"Mensa","beschrijving":"Studentenrestaurant"}]}
+{
+  "locaties": [
+    {
+      "id": 1,
+      "naam": "Bibliotheek",
+      "beschrijving": "Centrale bibliotheek van de campus",
+      "image": "images/bibliotheek.png"
+    },
+    {
+      "id": 2,
+      "naam": "Aula",
+      "beschrijving": "Auditorium voor events en lezingen",
+      "image": "images/aula.png"
+    },
+    {
+      "id": 3,
+      "naam": "Mensa",
+      "beschrijving": "Studentenrestaurant",
+      "image": "images/mensa.png"
+    }
+  ]
+}

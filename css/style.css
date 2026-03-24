@@ -99,6 +99,16 @@ body {
   color: #fff;
 }
 
+.card-go {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .card .card-icon {
   display: inline-flex;
   align-items: center;
@@ -145,6 +155,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
+  text-decoration: none;
 }
 
 .button-flex {
@@ -183,6 +194,7 @@ body {
   padding: 10px 0;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-icon {
@@ -198,6 +210,35 @@ body {
 
 .nav-item small {
   font-size: 0.72rem;
+}
+
+.content-page {
+  min-height: 280px;
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 14px;
+  padding: 16px;
+  color: #2a2a2a;
+}
+
+.page-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.page-card p {
+  line-height: 1.4;
+}
+
+.page-back {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 @media (max-width: 480px) {

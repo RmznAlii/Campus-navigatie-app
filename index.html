@@ -7,10 +7,66 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Campus Navigatie App</h1>
-        <p>Welkom bij de campus navigatie applicatie.</p>
+    <div class="app">
+        <header class="hero">
+            <button class="lang-btn" type="button">
+                <img src="IMG/icons/taal.png" alt="Taal" class="lang-icon">
+                <span>Taal</span>
+            </button>
+        </header>
+
+        <main class="content">
+            <div class="hero-text">
+                <h1>Welkom!</h1>
+            </div>
+
+            <section class="card card-search">
+                <div class="card-top">
+                    <img src="IMG/icons/search.png" alt="Zoek" class="card-icon">
+                    <h2>Zoek lokaal</h2>
+                </div>
+                <input type="search" aria-label="Zoek lokaal" placeholder="Voer lokaal nummer in..." />
+            </section>
+
+            <section class="card card-map">
+                <div class="card-top">
+                    <img src="IMG/icons/kaart.png" alt="Kaart" class="card-icon">
+                    <h2>Campus kaart</h2>
+                </div>
+                <input type="search" aria-label="Campus kaart" placeholder="Voer lokaal nummer in..." />
+            </section>
+
+            <div class="divider"></div>
+
+            <button class="button-link" type="button">
+                <span class="button-flex">
+                    <img src="IMG/icons/kalender.png" alt="Info" class="button-icon">
+                    <span>Gebouw info</span>
+                </span>
+                <span class="button-arrow">›</span>
+            </button>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Onderste navigatie">
+            <button class="nav-item active" type="button">
+                <img src="IMG/icons/navbar/home.png" alt="Home" class="nav-icon">
+                <small>Home</small>
+            </button>
+            <button class="nav-item" type="button">
+                <img src="IMG/icons/navbar/kaart.png" alt="Kaart" class="nav-icon">
+                <small>Kaart</small>
+            </button>
+            <button class="nav-item" type="button">
+                <img src="IMG/icons/navbar/route.png" alt="Route" class="nav-icon">
+                <small>Route</small>
+            </button>
+            <button class="nav-item" type="button">
+                <img src="IMG/icons/navbar/info.png" alt="Info" class="nav-icon">
+                <small>Info</small>
+            </button>
+        </nav>
     </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

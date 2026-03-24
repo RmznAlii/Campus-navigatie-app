@@ -1,22 +1,76 @@
 {
-  "locaties": [
-    {
-      "id": 1,
-      "naam": "Bibliotheek",
-      "beschrijving": "Centrale bibliotheek van de campus",
-      "image": "images/bibliotheek.png"
-    },
-    {
-      "id": 2,
-      "naam": "Aula",
-      "beschrijving": "Auditorium voor events en lezingen",
-      "image": "images/aula.png"
-    },
-    {
-      "id": 3,
-      "naam": "Mensa",
-      "beschrijving": "Studentenrestaurant",
-      "image": "images/mensa.png"
-    }
+  "lokalen": [
+    { "id": 1, "naam": "AL0.01", "beschrijving": "Gang", "image": "images/lokalen/al0-01.png" },
+    { "id": 2, "naam": "AL0.02", "beschrijving": "Receptie", "image": "images/lokalen/al0-02.png" },
+    { "id": 3, "naam": "AL0.03", "beschrijving": "Entree", "image": "images/lokalen/al0-03.png" },
+    { "id": 4, "naam": "AL0.04", "beschrijving": "Tourniquet", "image": "images/lokalen/al0-04.png" },
+    { "id": 5, "naam": "AL0.09", "beschrijving": "Trappenhuis", "image": "images/lokalen/al0-09.png" },
+    { "id": 6, "naam": "AL0.28", "beschrijving": "Tourniquet", "image": "images/lokalen/al0-28.png" },
+    { "id": 7, "naam": "AL0.29", "beschrijving": "Trappenhuis", "image": "images/lokalen/al0-29.png" },
+    { "id": 8, "naam": "AL0.30", "beschrijving": "Studieruimte", "image": "images/lokalen/al0-30.png" },
+    { "id": 9, "naam": "AL0.31", "beschrijving": "Toilet", "image": "images/lokalen/al0-31.png" },
+    { "id": 10, "naam": "AL0.35", "beschrijving": "Toilet", "image": "images/lokalen/al0-35.png" },
+    { "id": 11, "naam": "AL0.37", "beschrijving": "Expositieruimte", "image": "images/lokalen/al0-37.png" },
+    { "id": 12, "naam": "AL0.38", "beschrijving": "Collegezaal", "image": "images/lokalen/al0-38.png" },
+    { "id": 13, "naam": "AL0.44", "beschrijving": "Werkruimte", "image": "images/lokalen/al0-44.png" },
+    { "id": 14, "naam": "AL0.50", "beschrijving": "Entree", "image": "images/lokalen/al0-50.png" },
+    { "id": 15, "naam": "AL0.60", "beschrijving": "Trappenhuis", "image": "images/lokalen/al0-60.png" },
+    { "id": 16, "naam": "AL0.82", "beschrijving": "Fietsenstalling", "image": "images/lokalen/al0-82.png" },
+    { "id": 17, "naam": "AL0.83", "beschrijving": "Parkeergarage", "image": "images/lokalen/al0-83.png" },
+    { "id": 18, "naam": "AL0.92", "beschrijving": "Meet-up ruimte", "image": "images/lokalen/al0-92.png" },
+    { "id": 19, "naam": "AL0.94", "beschrijving": "Gang", "image": "images/lokalen/al0-94.png" },
+
+    { "id": 20, "naam": "AL1.01", "beschrijving": "Gang", "image": "images/lokalen/al1-01.png" },
+    { "id": 21, "naam": "AL1.04", "beschrijving": "Werkruimte", "image": "images/lokalen/al1-04.png" },
+    { "id": 22, "naam": "AL1.09", "beschrijving": "Trappenhuis", "image": "images/lokalen/al1-09.png" },
+    { "id": 23, "naam": "AL1.29", "beschrijving": "Gang", "image": "images/lokalen/al1-29.png" },
+    { "id": 24, "naam": "AL1.30", "beschrijving": "Studieruimte", "image": "images/lokalen/al1-30.png" },
+    { "id": 25, "naam": "AL1.31", "beschrijving": "Toilet", "image": "images/lokalen/al1-31.png" },
+    { "id": 26, "naam": "AL1.33", "beschrijving": "Toilet", "image": "images/lokalen/al1-33.png" },
+    { "id": 27, "naam": "AL1.40", "beschrijving": "Collegezaal XXL", "image": "images/lokalen/al1-40.png" },
+    { "id": 28, "naam": "AL1.42", "beschrijving": "Restaurant", "image": "images/lokalen/al1-42.png" },
+    { "id": 29, "naam": "AL1.46", "beschrijving": "Cateringruimte", "image": "images/lokalen/al1-46.png" },
+    { "id": 30, "naam": "AL1.47", "beschrijving": "Toilet", "image": "images/lokalen/al1-47.png" },
+    { "id": 31, "naam": "AL1.50", "beschrijving": "Trap", "image": "images/lokalen/al1-50.png" },
+    { "id": 32, "naam": "AL1.52", "beschrijving": "Vergaderruimte", "image": "images/lokalen/al1-52.png" },
+    { "id": 33, "naam": "AL1.54", "beschrijving": "Collegezaal XXL", "image": "images/lokalen/al1-54.png" },
+    { "id": 34, "naam": "AL1.55", "beschrijving": "Multimedia werkplaats", "image": "images/lokalen/al1-55.png" },
+    { "id": 35, "naam": "AL1.59", "beschrijving": "Studieruimte", "image": "images/lokalen/al1-59.png" },
+    { "id": 36, "naam": "AL1.62", "beschrijving": "Projectruimte", "image": "images/lokalen/al1-62.png" },
+    { "id": 37, "naam": "AL1.70", "beschrijving": "Docentenruimte", "image": "images/lokalen/al1-70.png" },
+
+    { "id": 38, "naam": "AL2.01", "beschrijving": "Gang", "image": "images/lokalen/al2-01.png" },
+    { "id": 39, "naam": "AL2.03", "beschrijving": "Gang", "image": "images/lokalen/al2-03.png" },
+    { "id": 40, "naam": "AL2.03a", "beschrijving": "Printkopieerruimte", "image": "images/lokalen/al2-03a.png" },
+    { "id": 41, "naam": "AL2.10", "beschrijving": "Collegezaal", "image": "images/lokalen/al2-10.png" },
+    { "id": 42, "naam": "AL2.12", "beschrijving": "Collegezaal", "image": "images/lokalen/al2-12.png" },
+    { "id": 43, "naam": "AL2.16", "beschrijving": "Collegezaal", "image": "images/lokalen/al2-16.png" },
+    { "id": 44, "naam": "AL2.28", "beschrijving": "Vergaderruimte", "image": "images/lokalen/al2-28.png" },
+    { "id": 45, "naam": "AL2.31", "beschrijving": "Toilet", "image": "images/lokalen/al2-31.png" },
+    { "id": 46, "naam": "AL2.34", "beschrijving": "Werkruimte", "image": "images/lokalen/al2-34.png" },
+    { "id": 47, "naam": "AL2.50", "beschrijving": "Secretariaat", "image": "images/lokalen/al2-50.png" },
+
+    { "id": 48, "naam": "AL3.02", "beschrijving": "Collegezaal XXL", "image": "images/lokalen/al3-02.png" },
+    { "id": 49, "naam": "AL3.09", "beschrijving": "Trappenhuis", "image": "images/lokalen/al3-09.png" },
+    { "id": 50, "naam": "AL3.24", "beschrijving": "Docentenruimte", "image": "images/lokalen/al3-24.png" },
+    { "id": 51, "naam": "AL3.31", "beschrijving": "Toilet", "image": "images/lokalen/al3-31.png" },
+    { "id": 52, "naam": "AL3.40", "beschrijving": "Docentenruimte", "image": "images/lokalen/al3-40.png" },
+    { "id": 53, "naam": "AL3.54", "beschrijving": "Collegezaal", "image": "images/lokalen/al3-54.png" },
+
+    { "id": 54, "naam": "AL4.02", "beschrijving": "Skillslab", "image": "images/lokalen/al4-02.png" },
+    { "id": 55, "naam": "AL4.12", "beschrijving": "Skillslab", "image": "images/lokalen/al4-12.png" },
+    { "id": 56, "naam": "AL4.18", "beschrijving": "Projectruimte", "image": "images/lokalen/al4-18.png" },
+    { "id": 57, "naam": "AL4.31", "beschrijving": "Toilet", "image": "images/lokalen/al4-31.png" },
+    { "id": 58, "naam": "AL4.44", "beschrijving": "Gang", "image": "images/lokalen/al4-44.png" },
+    { "id": 59, "naam": "AL4.56", "beschrijving": "Skillslab", "image": "images/lokalen/al4-56.png" },
+
+    { "id": 60, "naam": "AL5.02", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-02.png" },
+    { "id": 61, "naam": "AL5.04", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-04.png" },
+    { "id": 62, "naam": "AL5.06", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-06.png" },
+    { "id": 63, "naam": "AL5.16", "beschrijving": "Docentenruimte", "image": "images/lokalen/al5-16.png" },
+    { "id": 64, "naam": "AL5.31", "beschrijving": "Toilet", "image": "images/lokalen/al5-31.png" },
+    { "id": 65, "naam": "AL5.34", "beschrijving": "Docentenruimte", "image": "images/lokalen/al5-34.png" },
+    { "id": 66, "naam": "AL5.54", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-54.png" },
+    { "id": 67, "naam": "AL5.56", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-56.png" }
   ]
 }

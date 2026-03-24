@@ -1,76 +1,1396 @@
 {
+  "plattegronden": [
+    {
+      "verdieping": 0,
+      "gebouw": "AL",
+      "image": "images/floors/al0.png"
+    },
+    {
+      "verdieping": 1,
+      "gebouw": "AL",
+      "image": "images/floors/al1.png"
+    },
+    {
+      "verdieping": 2,
+      "gebouw": "AL",
+      "image": "images/floors/al2.png"
+    },
+    {
+      "verdieping": 1,
+      "gebouw": "AC",
+      "image": "images/floors/ac1.png"
+    },
+    {
+      "verdieping": 2,
+      "gebouw": "AC",
+      "image": "images/floors/ac2.png"
+    }
+  ],
+  "gebouwen": [
+    {
+      "id": "AL",
+      "naam": "Windesheim Almere",
+      "plattegronden": [
+        {
+          "verdieping": 0,
+          "code": "AL0",
+          "image": "images/floors/al0.png"
+        },
+        {
+          "verdieping": 1,
+          "code": "AL1",
+          "image": "images/floors/al1.png"
+        },
+        {
+          "verdieping": 2,
+          "code": "AL2",
+          "image": "images/floors/al2.png"
+        }
+      ]
+    },
+    {
+      "id": "AC",
+      "naam": "Windesheim Almere - AC",
+      "plattegronden": [
+        {
+          "verdieping": 1,
+          "code": "AC1",
+          "image": "images/floors/ac1.png"
+        },
+        {
+          "verdieping": 2,
+          "code": "AC2",
+          "image": "images/floors/ac2.png"
+        }
+      ]
+    }
+  ],
+  "indeling": {
+    "AL": {
+      "naam": "Windesheim Almere",
+      "verdiepingen": [
+        {
+          "verdieping": 0,
+          "code": "AL0",
+          "prefix": "AL0.",
+          "aantalLokalen": 19,
+          "idBereik": [
+            1,
+            19
+          ]
+        },
+        {
+          "verdieping": 1,
+          "code": "AL1",
+          "prefix": "AL1.",
+          "aantalLokalen": 18,
+          "idBereik": [
+            20,
+            37
+          ]
+        },
+        {
+          "verdieping": 2,
+          "code": "AL2",
+          "prefix": "AL2.",
+          "aantalLokalen": 10,
+          "idBereik": [
+            38,
+            47
+          ]
+        },
+        {
+          "verdieping": 3,
+          "code": "AL3",
+          "prefix": "AL3.",
+          "aantalLokalen": 6,
+          "idBereik": [
+            48,
+            53
+          ]
+        },
+        {
+          "verdieping": 4,
+          "code": "AL4",
+          "prefix": "AL4.",
+          "aantalLokalen": 6,
+          "idBereik": [
+            54,
+            59
+          ]
+        },
+        {
+          "verdieping": 5,
+          "code": "AL5",
+          "prefix": "AL5.",
+          "aantalLokalen": 8,
+          "idBereik": [
+            60,
+            67
+          ]
+        }
+      ]
+    },
+    "AC": {
+      "naam": "Windesheim Almere - AC",
+      "verdiepingen": [
+        {
+          "verdieping": 1,
+          "code": "AC1",
+          "prefix": "AC1.",
+          "aantalLokalen": 31,
+          "idBereik": [
+            68,
+            98
+          ]
+        },
+        {
+          "verdieping": 2,
+          "code": "AC2",
+          "prefix": "AC2.",
+          "aantalLokalen": 38,
+          "idBereik": [
+            99,
+            136
+          ]
+        }
+      ]
+    }
+  },
   "lokalen": [
-    { "id": 1, "naam": "AL0.01", "beschrijving": "Gang", "image": "images/lokalen/al0-01.png" },
-    { "id": 2, "naam": "AL0.02", "beschrijving": "Receptie", "image": "images/lokalen/al0-02.png" },
-    { "id": 3, "naam": "AL0.03", "beschrijving": "Entree", "image": "images/lokalen/al0-03.png" },
-    { "id": 4, "naam": "AL0.04", "beschrijving": "Tourniquet", "image": "images/lokalen/al0-04.png" },
-    { "id": 5, "naam": "AL0.09", "beschrijving": "Trappenhuis", "image": "images/lokalen/al0-09.png" },
-    { "id": 6, "naam": "AL0.28", "beschrijving": "Tourniquet", "image": "images/lokalen/al0-28.png" },
-    { "id": 7, "naam": "AL0.29", "beschrijving": "Trappenhuis", "image": "images/lokalen/al0-29.png" },
-    { "id": 8, "naam": "AL0.30", "beschrijving": "Studieruimte", "image": "images/lokalen/al0-30.png" },
-    { "id": 9, "naam": "AL0.31", "beschrijving": "Toilet", "image": "images/lokalen/al0-31.png" },
-    { "id": 10, "naam": "AL0.35", "beschrijving": "Toilet", "image": "images/lokalen/al0-35.png" },
-    { "id": 11, "naam": "AL0.37", "beschrijving": "Expositieruimte", "image": "images/lokalen/al0-37.png" },
-    { "id": 12, "naam": "AL0.38", "beschrijving": "Collegezaal", "image": "images/lokalen/al0-38.png" },
-    { "id": 13, "naam": "AL0.44", "beschrijving": "Werkruimte", "image": "images/lokalen/al0-44.png" },
-    { "id": 14, "naam": "AL0.50", "beschrijving": "Entree", "image": "images/lokalen/al0-50.png" },
-    { "id": 15, "naam": "AL0.60", "beschrijving": "Trappenhuis", "image": "images/lokalen/al0-60.png" },
-    { "id": 16, "naam": "AL0.82", "beschrijving": "Fietsenstalling", "image": "images/lokalen/al0-82.png" },
-    { "id": 17, "naam": "AL0.83", "beschrijving": "Parkeergarage", "image": "images/lokalen/al0-83.png" },
-    { "id": 18, "naam": "AL0.92", "beschrijving": "Meet-up ruimte", "image": "images/lokalen/al0-92.png" },
-    { "id": 19, "naam": "AL0.94", "beschrijving": "Gang", "image": "images/lokalen/al0-94.png" },
-
-    { "id": 20, "naam": "AL1.01", "beschrijving": "Gang", "image": "images/lokalen/al1-01.png" },
-    { "id": 21, "naam": "AL1.04", "beschrijving": "Werkruimte", "image": "images/lokalen/al1-04.png" },
-    { "id": 22, "naam": "AL1.09", "beschrijving": "Trappenhuis", "image": "images/lokalen/al1-09.png" },
-    { "id": 23, "naam": "AL1.29", "beschrijving": "Gang", "image": "images/lokalen/al1-29.png" },
-    { "id": 24, "naam": "AL1.30", "beschrijving": "Studieruimte", "image": "images/lokalen/al1-30.png" },
-    { "id": 25, "naam": "AL1.31", "beschrijving": "Toilet", "image": "images/lokalen/al1-31.png" },
-    { "id": 26, "naam": "AL1.33", "beschrijving": "Toilet", "image": "images/lokalen/al1-33.png" },
-    { "id": 27, "naam": "AL1.40", "beschrijving": "Collegezaal XXL", "image": "images/lokalen/al1-40.png" },
-    { "id": 28, "naam": "AL1.42", "beschrijving": "Restaurant", "image": "images/lokalen/al1-42.png" },
-    { "id": 29, "naam": "AL1.46", "beschrijving": "Cateringruimte", "image": "images/lokalen/al1-46.png" },
-    { "id": 30, "naam": "AL1.47", "beschrijving": "Toilet", "image": "images/lokalen/al1-47.png" },
-    { "id": 31, "naam": "AL1.50", "beschrijving": "Trap", "image": "images/lokalen/al1-50.png" },
-    { "id": 32, "naam": "AL1.52", "beschrijving": "Vergaderruimte", "image": "images/lokalen/al1-52.png" },
-    { "id": 33, "naam": "AL1.54", "beschrijving": "Collegezaal XXL", "image": "images/lokalen/al1-54.png" },
-    { "id": 34, "naam": "AL1.55", "beschrijving": "Multimedia werkplaats", "image": "images/lokalen/al1-55.png" },
-    { "id": 35, "naam": "AL1.59", "beschrijving": "Studieruimte", "image": "images/lokalen/al1-59.png" },
-    { "id": 36, "naam": "AL1.62", "beschrijving": "Projectruimte", "image": "images/lokalen/al1-62.png" },
-    { "id": 37, "naam": "AL1.70", "beschrijving": "Docentenruimte", "image": "images/lokalen/al1-70.png" },
-
-    { "id": 38, "naam": "AL2.01", "beschrijving": "Gang", "image": "images/lokalen/al2-01.png" },
-    { "id": 39, "naam": "AL2.03", "beschrijving": "Gang", "image": "images/lokalen/al2-03.png" },
-    { "id": 40, "naam": "AL2.03a", "beschrijving": "Printkopieerruimte", "image": "images/lokalen/al2-03a.png" },
-    { "id": 41, "naam": "AL2.10", "beschrijving": "Collegezaal", "image": "images/lokalen/al2-10.png" },
-    { "id": 42, "naam": "AL2.12", "beschrijving": "Collegezaal", "image": "images/lokalen/al2-12.png" },
-    { "id": 43, "naam": "AL2.16", "beschrijving": "Collegezaal", "image": "images/lokalen/al2-16.png" },
-    { "id": 44, "naam": "AL2.28", "beschrijving": "Vergaderruimte", "image": "images/lokalen/al2-28.png" },
-    { "id": 45, "naam": "AL2.31", "beschrijving": "Toilet", "image": "images/lokalen/al2-31.png" },
-    { "id": 46, "naam": "AL2.34", "beschrijving": "Werkruimte", "image": "images/lokalen/al2-34.png" },
-    { "id": 47, "naam": "AL2.50", "beschrijving": "Secretariaat", "image": "images/lokalen/al2-50.png" },
-
-    { "id": 48, "naam": "AL3.02", "beschrijving": "Collegezaal XXL", "image": "images/lokalen/al3-02.png" },
-    { "id": 49, "naam": "AL3.09", "beschrijving": "Trappenhuis", "image": "images/lokalen/al3-09.png" },
-    { "id": 50, "naam": "AL3.24", "beschrijving": "Docentenruimte", "image": "images/lokalen/al3-24.png" },
-    { "id": 51, "naam": "AL3.31", "beschrijving": "Toilet", "image": "images/lokalen/al3-31.png" },
-    { "id": 52, "naam": "AL3.40", "beschrijving": "Docentenruimte", "image": "images/lokalen/al3-40.png" },
-    { "id": 53, "naam": "AL3.54", "beschrijving": "Collegezaal", "image": "images/lokalen/al3-54.png" },
-
-    { "id": 54, "naam": "AL4.02", "beschrijving": "Skillslab", "image": "images/lokalen/al4-02.png" },
-    { "id": 55, "naam": "AL4.12", "beschrijving": "Skillslab", "image": "images/lokalen/al4-12.png" },
-    { "id": 56, "naam": "AL4.18", "beschrijving": "Projectruimte", "image": "images/lokalen/al4-18.png" },
-    { "id": 57, "naam": "AL4.31", "beschrijving": "Toilet", "image": "images/lokalen/al4-31.png" },
-    { "id": 58, "naam": "AL4.44", "beschrijving": "Gang", "image": "images/lokalen/al4-44.png" },
-    { "id": 59, "naam": "AL4.56", "beschrijving": "Skillslab", "image": "images/lokalen/al4-56.png" },
-
-    { "id": 60, "naam": "AL5.02", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-02.png" },
-    { "id": 61, "naam": "AL5.04", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-04.png" },
-    { "id": 62, "naam": "AL5.06", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-06.png" },
-    { "id": 63, "naam": "AL5.16", "beschrijving": "Docentenruimte", "image": "images/lokalen/al5-16.png" },
-    { "id": 64, "naam": "AL5.31", "beschrijving": "Toilet", "image": "images/lokalen/al5-31.png" },
-    { "id": 65, "naam": "AL5.34", "beschrijving": "Docentenruimte", "image": "images/lokalen/al5-34.png" },
-    { "id": 66, "naam": "AL5.54", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-54.png" },
-    { "id": 67, "naam": "AL5.56", "beschrijving": "Collegezaal", "image": "images/lokalen/al5-56.png" }
-  ]
+    {
+      "id": 1,
+      "naam": "AL0.01",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 58,
+        "y": 17
+      }
+    },
+    {
+      "id": 2,
+      "naam": "AL0.02",
+      "beschrijving": "Receptie",
+      "coordinaten": {
+        "x": 42,
+        "y": 12
+      }
+    },
+    {
+      "id": 3,
+      "naam": "AL0.03",
+      "beschrijving": "Entree",
+      "coordinaten": {
+        "x": 40,
+        "y": 6
+      }
+    },
+    {
+      "id": 4,
+      "naam": "AL0.04",
+      "beschrijving": "Tourniquet",
+      "coordinaten": {
+        "x": 51,
+        "y": 3
+      }
+    },
+    {
+      "id": 5,
+      "naam": "AL0.09",
+      "beschrijving": "Trappenhuis",
+      "coordinaten": {
+        "x": 46,
+        "y": 17
+      }
+    },
+    {
+      "id": 6,
+      "naam": "AL0.28",
+      "beschrijving": "Tourniquet",
+      "coordinaten": {
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "id": 7,
+      "naam": "AL0.29",
+      "beschrijving": "Trappenhuis",
+      "coordinaten": {
+        "x": 36,
+        "y": 13
+      }
+    },
+    {
+      "id": 8,
+      "naam": "AL0.30",
+      "beschrijving": "Studieruimte",
+      "coordinaten": {
+        "x": 16,
+        "y": 21
+      }
+    },
+    {
+      "id": 9,
+      "naam": "AL0.31",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 30,
+        "y": 16
+      }
+    },
+    {
+      "id": 10,
+      "naam": "AL0.35",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 45,
+        "y": 17
+      }
+    },
+    {
+      "id": 11,
+      "naam": "AL0.37",
+      "beschrijving": "Expositieruimte",
+      "coordinaten": {
+        "x": 17,
+        "y": 30
+      }
+    },
+    {
+      "id": 12,
+      "naam": "AL0.38",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 13,
+        "y": 43
+      }
+    },
+    {
+      "id": 13,
+      "naam": "AL0.44",
+      "beschrijving": "Werkruimte",
+      "coordinaten": {
+        "x": 13,
+        "y": 59
+      }
+    },
+    {
+      "id": 14,
+      "naam": "AL0.50",
+      "beschrijving": "Entree",
+      "coordinaten": {
+        "x": 13,
+        "y": 73
+      }
+    },
+    {
+      "id": 15,
+      "naam": "AL0.60",
+      "beschrijving": "Trappenhuis",
+      "coordinaten": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "id": 16,
+      "naam": "AL0.82",
+      "beschrijving": "Fietsenstalling",
+      "coordinaten": {
+        "x": 57,
+        "y": 69
+      }
+    },
+    {
+      "id": 17,
+      "naam": "AL0.83",
+      "beschrijving": "Parkeergarage",
+      "coordinaten": {
+        "x": 57,
+        "y": 86
+      }
+    },
+    {
+      "id": 18,
+      "naam": "AL0.92",
+      "beschrijving": "Meet-up ruimte",
+      "coordinaten": {
+        "x": 53,
+        "y": 40
+      }
+    },
+    {
+      "id": 19,
+      "naam": "AL0.94",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 61,
+        "y": 23
+      }
+    },
+    {
+      "id": 20,
+      "naam": "AL1.01",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 58,
+        "y": 10
+      }
+    },
+    {
+      "id": 21,
+      "naam": "AL1.04",
+      "beschrijving": "Werkruimte",
+      "coordinaten": {
+        "x": 63,
+        "y": 4
+      }
+    },
+    {
+      "id": 22,
+      "naam": "AL1.09",
+      "beschrijving": "Trappenhuis",
+      "coordinaten": {
+        "x": 46,
+        "y": 10
+      }
+    },
+    {
+      "id": 23,
+      "naam": "AL1.29",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 20,
+        "y": 13
+      }
+    },
+    {
+      "id": 24,
+      "naam": "AL1.30",
+      "beschrijving": "Studieruimte",
+      "coordinaten": {
+        "x": 17,
+        "y": 19
+      }
+    },
+    {
+      "id": 25,
+      "naam": "AL1.31",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 35,
+        "y": 12
+      }
+    },
+    {
+      "id": 26,
+      "naam": "AL1.33",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 66,
+        "y": 9
+      }
+    },
+    {
+      "id": 27,
+      "naam": "AL1.40",
+      "beschrijving": "Collegezaal XXL",
+      "coordinaten": {
+        "x": 72,
+        "y": 18
+      }
+    },
+    {
+      "id": 28,
+      "naam": "AL1.42",
+      "beschrijving": "Restaurant",
+      "coordinaten": {
+        "x": 36,
+        "y": 50
+      }
+    },
+    {
+      "id": 29,
+      "naam": "AL1.46",
+      "beschrijving": "Cateringruimte",
+      "coordinaten": {
+        "x": 71,
+        "y": 42
+      }
+    },
+    {
+      "id": 30,
+      "naam": "AL1.47",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 73,
+        "y": 60
+      }
+    },
+    {
+      "id": 31,
+      "naam": "AL1.50",
+      "beschrijving": "Trap",
+      "coordinaten": {
+        "x": 80,
+        "y": 61
+      }
+    },
+    {
+      "id": 32,
+      "naam": "AL1.52",
+      "beschrijving": "Vergaderruimte",
+      "coordinaten": {
+        "x": 50,
+        "y": 69
+      }
+    },
+    {
+      "id": 33,
+      "naam": "AL1.54",
+      "beschrijving": "Collegezaal XXL",
+      "coordinaten": {
+        "x": 70,
+        "y": 80
+      }
+    },
+    {
+      "id": 34,
+      "naam": "AL1.55",
+      "beschrijving": "Multimedia werkplaats",
+      "coordinaten": {
+        "x": 57,
+        "y": 82
+      }
+    },
+    {
+      "id": 35,
+      "naam": "AL1.59",
+      "beschrijving": "Studieruimte",
+      "coordinaten": {
+        "x": 14,
+        "y": 58
+      }
+    },
+    {
+      "id": 36,
+      "naam": "AL1.62",
+      "beschrijving": "Projectruimte",
+      "coordinaten": {
+        "x": 13,
+        "y": 74
+      }
+    },
+    {
+      "id": 37,
+      "naam": "AL1.70",
+      "beschrijving": "Docentenruimte",
+      "coordinaten": {
+        "x": 14,
+        "y": 83
+      }
+    },
+    {
+      "id": 38,
+      "naam": "AL2.01",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 52,
+        "y": 12
+      }
+    },
+    {
+      "id": 39,
+      "naam": "AL2.03",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 43,
+        "y": 7
+      }
+    },
+    {
+      "id": 40,
+      "naam": "AL2.03a",
+      "beschrijving": "Printkopieerruimte",
+      "coordinaten": {
+        "x": 42,
+        "y": 18
+      }
+    },
+    {
+      "id": 41,
+      "naam": "AL2.10",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 84,
+        "y": 5
+      }
+    },
+    {
+      "id": 42,
+      "naam": "AL2.12",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 57,
+        "y": 5
+      }
+    },
+    {
+      "id": 43,
+      "naam": "AL2.16",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 29,
+        "y": 5
+      }
+    },
+    {
+      "id": 44,
+      "naam": "AL2.28",
+      "beschrijving": "Vergaderruimte",
+      "coordinaten": {
+        "x": 56,
+        "y": 50
+      }
+    },
+    {
+      "id": 45,
+      "naam": "AL2.31",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 44,
+        "y": 12
+      }
+    },
+    {
+      "id": 46,
+      "naam": "AL2.34",
+      "beschrijving": "Werkruimte",
+      "coordinaten": {
+        "x": 40,
+        "y": 38
+      }
+    },
+    {
+      "id": 47,
+      "naam": "AL2.50",
+      "beschrijving": "Secretariaat",
+      "coordinaten": {
+        "x": 78,
+        "y": 21
+      }
+    },
+    {
+      "id": 48,
+      "naam": "AL3.02",
+      "beschrijving": "Collegezaal XXL",
+      "coordinaten": {
+        "x": 75,
+        "y": 14
+      }
+    },
+    {
+      "id": 49,
+      "naam": "AL3.09",
+      "beschrijving": "Trappenhuis",
+      "coordinaten": {
+        "x": 47,
+        "y": 39
+      }
+    },
+    {
+      "id": 50,
+      "naam": "AL3.24",
+      "beschrijving": "Docentenruimte",
+      "coordinaten": {
+        "x": 8,
+        "y": 15
+      }
+    },
+    {
+      "id": 51,
+      "naam": "AL3.31",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 40,
+        "y": 38
+      }
+    },
+    {
+      "id": 52,
+      "naam": "AL3.40",
+      "beschrijving": "Docentenruimte",
+      "coordinaten": {
+        "x": 26,
+        "y": 79
+      }
+    },
+    {
+      "id": 53,
+      "naam": "AL3.54",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 82,
+        "y": 75
+      }
+    },
+    {
+      "id": 54,
+      "naam": "AL4.02",
+      "beschrijving": "Skillslab",
+      "coordinaten": {
+        "x": 79,
+        "y": 14
+      }
+    },
+    {
+      "id": 55,
+      "naam": "AL4.12",
+      "beschrijving": "Skillslab",
+      "coordinaten": {
+        "x": 50,
+        "y": 16
+      }
+    },
+    {
+      "id": 56,
+      "naam": "AL4.18",
+      "beschrijving": "Projectruimte",
+      "coordinaten": {
+        "x": 29,
+        "y": 22
+      }
+    },
+    {
+      "id": 57,
+      "naam": "AL4.31",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 41,
+        "y": 37
+      }
+    },
+    {
+      "id": 58,
+      "naam": "AL4.44",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 48,
+        "y": 55
+      }
+    },
+    {
+      "id": 59,
+      "naam": "AL4.56",
+      "beschrijving": "Skillslab",
+      "coordinaten": {
+        "x": 80,
+        "y": 72
+      }
+    },
+    {
+      "id": 60,
+      "naam": "AL5.02",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 78,
+        "y": 21
+      }
+    },
+    {
+      "id": 61,
+      "naam": "AL5.04",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 80,
+        "y": 8
+      }
+    },
+    {
+      "id": 62,
+      "naam": "AL5.06",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 54,
+        "y": 14
+      }
+    },
+    {
+      "id": 63,
+      "naam": "AL5.16",
+      "beschrijving": "Docentenruimte",
+      "coordinaten": {
+        "x": 40,
+        "y": 12
+      }
+    },
+    {
+      "id": 64,
+      "naam": "AL5.31",
+      "beschrijving": "Toilet",
+      "coordinaten": {
+        "x": 39,
+        "y": 35
+      }
+    },
+    {
+      "id": 65,
+      "naam": "AL5.34",
+      "beschrijving": "Docentenruimte",
+      "coordinaten": {
+        "x": 10,
+        "y": 72
+      }
+    },
+    {
+      "id": 66,
+      "naam": "AL5.54",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 81,
+        "y": 73
+      }
+    },
+    {
+      "id": 67,
+      "naam": "AL5.56",
+      "beschrijving": "Collegezaal",
+      "coordinaten": {
+        "x": 82,
+        "y": 49
+      }
+    },
+    {
+      "id": 68,
+      "naam": "AC1.04",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 95,
+        "y": 88
+      }
+    },
+    {
+      "id": 69,
+      "naam": "AC1.06",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 76
+      }
+    },
+    {
+      "id": 70,
+      "naam": "AC1.07",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 68
+      }
+    },
+    {
+      "id": 71,
+      "naam": "AC1.08",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 61
+      }
+    },
+    {
+      "id": 72,
+      "naam": "AC1.09",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 54
+      }
+    },
+    {
+      "id": 73,
+      "naam": "AC1.10",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 47
+      }
+    },
+    {
+      "id": 74,
+      "naam": "AC1.11",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 40
+      }
+    },
+    {
+      "id": 75,
+      "naam": "AC1.12",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 33
+      }
+    },
+    {
+      "id": 76,
+      "naam": "AC1.15",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 96,
+        "y": 17
+      }
+    },
+    {
+      "id": 77,
+      "naam": "AC1.16",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 90,
+        "y": 8
+      }
+    },
+    {
+      "id": 78,
+      "naam": "AC1.18",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 81,
+        "y": 8
+      }
+    },
+    {
+      "id": 79,
+      "naam": "AC1.20",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 70,
+        "y": 10
+      }
+    },
+    {
+      "id": 80,
+      "naam": "AC1.22",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 81,
+        "y": 31
+      }
+    },
+    {
+      "id": 81,
+      "naam": "AC1.24",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 70,
+        "y": 31
+      }
+    },
+    {
+      "id": 82,
+      "naam": "AC1.26",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 59,
+        "y": 31
+      }
+    },
+    {
+      "id": 83,
+      "naam": "AC1.28",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 68,
+        "y": 52
+      }
+    },
+    {
+      "id": 84,
+      "naam": "AC1.30",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 59,
+        "y": 52
+      }
+    },
+    {
+      "id": 85,
+      "naam": "AC1.54",
+      "beschrijving": "Gang / open ruimte",
+      "coordinaten": {
+        "x": 61,
+        "y": 42
+      }
+    },
+    {
+      "id": 86,
+      "naam": "AC1.64",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 55,
+        "y": 57
+      }
+    },
+    {
+      "id": 87,
+      "naam": "AC1.65",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 41,
+        "y": 14
+      }
+    },
+    {
+      "id": 88,
+      "naam": "AC1.68",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 27,
+        "y": 10
+      }
+    },
+    {
+      "id": 89,
+      "naam": "AC1.69",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 13,
+        "y": 8
+      }
+    },
+    {
+      "id": 90,
+      "naam": "AC1.70",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 13,
+        "y": 22
+      }
+    },
+    {
+      "id": 91,
+      "naam": "AC1.72",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 13,
+        "y": 39
+      }
+    },
+    {
+      "id": 92,
+      "naam": "AC1.74",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 13,
+        "y": 55
+      }
+    },
+    {
+      "id": 93,
+      "naam": "AC1.74a",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 20,
+        "y": 62
+      }
+    },
+    {
+      "id": 94,
+      "naam": "AC1.76b",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 16,
+        "y": 70
+      }
+    },
+    {
+      "id": 95,
+      "naam": "AC1.77",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 23,
+        "y": 67
+      }
+    },
+    {
+      "id": 96,
+      "naam": "AC1.78",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 9,
+        "y": 73
+      }
+    },
+    {
+      "id": 97,
+      "naam": "AC1.80",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 82,
+        "y": 56
+      }
+    },
+    {
+      "id": 98,
+      "naam": "AC1.82",
+      "beschrijving": "Open ruimte",
+      "coordinaten": {
+        "x": 82,
+        "y": 48
+      }
+    },
+    {
+      "id": 99,
+      "naam": "AC2.01",
+      "beschrijving": "Open ruimte",
+      "coordinaten": {
+        "x": 28,
+        "y": 9
+      }
+    },
+    {
+      "id": 100,
+      "naam": "AC2.03",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 61,
+        "y": 6
+      }
+    },
+    {
+      "id": 101,
+      "naam": "AC2.04",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 7,
+        "y": 18
+      }
+    },
+    {
+      "id": 102,
+      "naam": "AC2.06",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 7,
+        "y": 32
+      }
+    },
+    {
+      "id": 103,
+      "naam": "AC2.08",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 7,
+        "y": 47
+      }
+    },
+    {
+      "id": 104,
+      "naam": "AC2.10",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 10,
+        "y": 71
+      }
+    },
+    {
+      "id": 105,
+      "naam": "AC2.12",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 10,
+        "y": 83
+      }
+    },
+    {
+      "id": 106,
+      "naam": "AC2.14",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 10,
+        "y": 92
+      }
+    },
+    {
+      "id": 107,
+      "naam": "AC2.16",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 32,
+        "y": 95
+      }
+    },
+    {
+      "id": 108,
+      "naam": "AC2.18",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 45,
+        "y": 93
+      }
+    },
+    {
+      "id": 109,
+      "naam": "AC2.20",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 35,
+        "y": 87
+      }
+    },
+    {
+      "id": 110,
+      "naam": "AC2.22",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 51,
+        "y": 82
+      }
+    },
+    {
+      "id": 111,
+      "naam": "AC2.23",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 41,
+        "y": 61
+      }
+    },
+    {
+      "id": 112,
+      "naam": "AC2.24",
+      "beschrijving": "Gang / randzone",
+      "coordinaten": {
+        "x": 52,
+        "y": 98
+      }
+    },
+    {
+      "id": 113,
+      "naam": "AC2.26",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 45,
+        "y": 74
+      }
+    },
+    {
+      "id": 114,
+      "naam": "AC2.28",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 42,
+        "y": 50
+      }
+    },
+    {
+      "id": 115,
+      "naam": "AC2.30",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 41,
+        "y": 67
+      }
+    },
+    {
+      "id": 116,
+      "naam": "AC2.32",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 41,
+        "y": 54
+      }
+    },
+    {
+      "id": 117,
+      "naam": "AC2.34",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 41,
+        "y": 40
+      }
+    },
+    {
+      "id": 118,
+      "naam": "AC2.36",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 41,
+        "y": 28
+      }
+    },
+    {
+      "id": 119,
+      "naam": "AC2.38",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 36,
+        "y": 24
+      }
+    },
+    {
+      "id": 120,
+      "naam": "AC2.40",
+      "beschrijving": "Kern / doorgang",
+      "coordinaten": {
+        "x": 31,
+        "y": 66
+      }
+    },
+    {
+      "id": 121,
+      "naam": "AC2.42",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 28,
+        "y": 78
+      }
+    },
+    {
+      "id": 122,
+      "naam": "AC2.44",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 28,
+        "y": 89
+      }
+    },
+    {
+      "id": 123,
+      "naam": "AC2.48",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 19,
+        "y": 63
+      }
+    },
+    {
+      "id": 124,
+      "naam": "AC2.50",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 22,
+        "y": 59
+      }
+    },
+    {
+      "id": 125,
+      "naam": "AC2.52",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 23,
+        "y": 51
+      }
+    },
+    {
+      "id": 126,
+      "naam": "AC2.54",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 23,
+        "y": 43
+      }
+    },
+    {
+      "id": 127,
+      "naam": "AC2.56",
+      "beschrijving": "Ruimte",
+      "coordinaten": {
+        "x": 23,
+        "y": 35
+      }
+    },
+    {
+      "id": 128,
+      "naam": "AC2.58",
+      "beschrijving": "Gang",
+      "coordinaten": {
+        "x": 21,
+        "y": 28
+      }
+    },
+    {
+      "id": 129,
+      "naam": "AC2.60",
+      "beschrijving": "Sanitair / service",
+      "coordinaten": {
+        "x": 8,
+        "y": 62
+      }
+    },
+    {
+      "id": 130,
+      "naam": "AC2.62",
+      "beschrijving": "Sanitair / service",
+      "coordinaten": {
+        "x": 10,
+        "y": 61
+      }
+    },
+    {
+      "id": 131,
+      "naam": "AC2.64",
+      "beschrijving": "Sanitair / service",
+      "coordinaten": {
+        "x": 12,
+        "y": 59
+      }
+    },
+    {
+      "id": 132,
+      "naam": "AC2.66",
+      "beschrijving": "Sanitair / service",
+      "coordinaten": {
+        "x": 7,
+        "y": 64
+      }
+    },
+    {
+      "id": 133,
+      "naam": "AC2.68",
+      "beschrijving": "Sanitair / service",
+      "coordinaten": {
+        "x": 4,
+        "y": 66
+      }
+    },
+    {
+      "id": 134,
+      "naam": "AC2.70",
+      "beschrijving": "Service / kern",
+      "coordinaten": {
+        "x": 56,
+        "y": 5
+      }
+    },
+    {
+      "id": 135,
+      "naam": "AC2.72",
+      "beschrijving": "Service / kern",
+      "coordinaten": {
+        "x": 58,
+        "y": 5
+      }
+    },
+    {
+      "id": 136,
+      "naam": "AC2.78",
+      "beschrijving": "Atrium / open ruimte",
+      "coordinaten": {
+        "x": 56,
+        "y": 12
+      }
+    }
+  ],
+  "coordinatenConfig": {
+    "systeem": "2D-plattegrond",
+    "eenheid": "percent",
+    "x": "0-100 van links naar rechts",
+    "y": "0-100 van boven naar beneden",
+    "default": {
+      "x": null,
+      "y": null
+    }
+  }
 }

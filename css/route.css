@@ -152,11 +152,14 @@
 
 /* Groene navigatiebalk override */
 .app-route .bottom-nav {
-  background: #B1D249 ;
+  background: #b2d347;
+  padding: 0;
+  gap: 0;
 }
 
 .app-route .nav-item {
   background: transparent;
+  padding: 11px 0 10px;
 }
 
 .app-route .nav-item small {
@@ -164,8 +167,8 @@
 }
 
 .app-route .nav-item.active {
-  background: #45B97C;
-  border-radius: 12px;
+  background: #49b87c;
+  border-radius: 8px 8px 0 0;
 }
 
 .app-route .nav-item.active small {

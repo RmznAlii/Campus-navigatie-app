@@ -143,6 +143,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .route-overlay {
@@ -230,20 +232,20 @@
 
 /* Bottom Nav */
 .app-route-detail .bottom-nav {
-  background: #ffca0b;
+  background: #b2d347;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: stretch;
-  padding: 8px;
-  gap: 4px;
+  padding: 0;
+  gap: 0;
 }
 
 .app-route-detail .nav-item {
-  background: rgb(255, 202, 11);
+  background: transparent;
   color: #ffffff;
   font-weight: 700;
   gap: 4px;
-  padding: 10px 0;
+  padding: 11px 0 10px;
   height: auto;
   border-top: none;
 }
@@ -259,13 +261,14 @@
 }
 
 .app-route-detail .nav-item.active {
-  background: #ff9802;
+  background: #49b87c;
   color: #ffffff;
   border-top: none;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 11px;
   box-shadow: none;
   transform: none;
+  border-radius: 8px 8px 0 0;
 }
 
 @media (max-width: 600px) {

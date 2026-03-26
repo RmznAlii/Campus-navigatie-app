@@ -73,7 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: none;
   z-index: 1;
 }
 
@@ -82,7 +82,7 @@ body {
   font-size: 2.5rem;
   font-weight: 900;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  text-shadow: none;
 }
 
 .card {
@@ -181,15 +181,15 @@ body {
 }
 
 .bottom-nav {
-  background: #ffca0b;
+  background: #f7c907;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  padding: 8px;
+  gap: 0;
+  padding: 0;
 }
 
 .nav-item {
-  background: rgb(255, 202, 11);
+  background: transparent;
   border: none;
   color: white;
   display: flex;
@@ -197,7 +197,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 10px 0;
+  padding: 11px 0 10px;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
@@ -210,8 +210,9 @@ body {
 }
 
 .nav-item.active {
-  background: #ff9802;
+  background: #f4a71e;
   color: #fff;
+  border-radius: 8px 8px 0 0;
 }
 
 .nav-item small {

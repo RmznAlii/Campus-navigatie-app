@@ -170,6 +170,8 @@
   max-width: none;
   display: block;
   background: #efefef;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .kaart-marker {
@@ -277,15 +279,18 @@
 }
 
 .app-kaart .bottom-nav {
-  background: #1EBCC5;
+  background: #2cbac7;
+  padding: 0;
+  gap: 0;
 }
 
 .app-kaart .nav-item {
   background: transparent;
+  padding: 11px 0 10px;
 }
 
 .app-kaart .nav-item.active {
-  background: #4594D3;
+  background: #4a90d2;
   border-radius: 0;
 }
 

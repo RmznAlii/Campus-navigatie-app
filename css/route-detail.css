@@ -230,29 +230,28 @@
 
 /* Bottom Nav */
 .app-route-detail .bottom-nav {
-  background: #afcd42;
+  background: #ffca0b;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: stretch;
-  padding: 0;
-  gap: 0;
+  padding: 8px;
+  gap: 4px;
 }
 
 .app-route-detail .nav-item {
-  background: transparent;
+  background: rgb(255, 202, 11);
   color: #ffffff;
   font-weight: 700;
-  gap: 5px;
-  padding: 10px 0 8px;
-  height: 100%;
+  gap: 4px;
+  padding: 10px 0;
+  height: auto;
   border-top: none;
 }
 
 .app-route-detail .nav-icon {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   opacity: 1;
-  filter: none;
 }
 
 .app-route-detail .nav-item small {
@@ -260,20 +259,13 @@
 }
 
 .app-route-detail .nav-item.active {
-  background: #45b97c;
+  background: #ff9802;
   color: #ffffff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   border-top: none;
-  margin-top: -10px;
-  padding-top: 16px;
+  margin-top: 0;
+  padding-top: 10px;
   box-shadow: none;
   transform: none;
-}
-
-.app-route-detail .nav-item.active .nav-icon {
-  opacity: 1;
-  filter: none;
 }
 
 @media (max-width: 600px) {

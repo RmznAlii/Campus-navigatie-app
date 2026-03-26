@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="app">
-        <header class="hero">
+        <header class="hero hero-home">
             <button class="lang-btn" type="button">
                 <img src="IMG/icons/taal.png" alt="Taal" class="lang-icon">
                 <span>Taal</span>
@@ -20,22 +20,22 @@
                 <h1>Welkom!</h1>
             </div>
 
-            <form class="card card-search" action="lokaal-zoeken.html" method="get">
+            <form id="indexLokaalForm" class="card card-search" action="route-detail.html" method="get">
                 <div class="card-top">
                     <img src="IMG/icons/search.png" alt="Zoek" class="card-icon">
                     <h2>Zoek lokaal</h2>
-                    <button class="card-go" type="submit" aria-label="Ga naar lokaal zoeken">›</button>
+                    <button id="indexLokaalBtn" class="card-go" type="submit" aria-label="Ga naar lokaal zoeken">›</button>
                 </div>
-                <input type="search" name="q" aria-label="Zoek lokaal" placeholder="Voer lokaal nummer in..." />
+                <input id="indexLokaalInput" type="search" name="q" aria-label="Zoek lokaal" placeholder="Voer lokaal nummer in..." />
             </form>
 
-            <form class="card card-map" action="kaart.html" method="get">
+            <form id="indexKaartForm" class="card card-map" action="kaart.html" method="get">
                 <div class="card-top">
                     <img src="IMG/icons/kaart.png" alt="Kaart" class="card-icon">
                     <h2>Campus kaart</h2>
-                    <button class="card-go" type="submit" aria-label="Ga naar campus kaart">›</button>
+                    <button id="indexKaartBtn" class="card-go" type="submit" aria-label="Ga naar campus kaart">›</button>
                 </div>
-                <input type="search" name="q" aria-label="Campus kaart" placeholder="Voer lokaal nummer in..." />
+                <input id="indexKaartInput" type="search" name="q" aria-label="Campus kaart" placeholder="Voer lokaal nummer in..." />
             </form>
 
             <div class="divider"></div>
@@ -69,6 +69,6 @@
         </nav>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/pages/index.js"></script>
 </body>
 </html>

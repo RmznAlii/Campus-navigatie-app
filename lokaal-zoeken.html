@@ -46,52 +46,6 @@
         </nav>
     </div>
 
-    <script src="js/script.js"></script>
-    <script>
-        // Lokaal zoeken en resultaten weergeven
-        async function searchLokaal() {
-            const params = new URLSearchParams(window.location.search);
-            const query = params.get('q')?.trim() || '';
-            const resultsDiv = document.getElementById('search-results');
-
-            if (!query) {
-                resultsDiv.innerHTML = '<p>Voer een lokaalnummer in om te zoeken.</p>';
-                return;
-            }
-
-            try {
-                const response = await fetch('data/locaties.json');
-                const data = await response.json();
-                
-                const lokalen = data.lokalen;
-                const found = lokalen.filter(l => 
-                    l.naam.toLowerCase().includes(query.toLowerCase())
-                );
-
-                if (found.length === 0) {
-                    resultsDiv.innerHTML = `<p>Geen lokalen gevonden voor "<strong>${query}</strong>"</p>`;
-                } else if (found.length === 1) {
-                    const lokaal = found[0];
-                    resultsDiv.innerHTML = `
-                        <div style="margin-top: 12px;">
-                            <strong>${lokaal.naam}</strong><br>
-                            <small>${lokaal.beschrijving}</small>
-                        </div>
-                    `;
-                } else {
-                    let html = `<p>Gevonden: ${found.length} resultaten voor "<strong>${query}</strong>"</p>`;
-                    html += '<ul style="padding-left: 16px; margin: 8px 0;">';
-                    found.forEach(l => {
-                        html += `<li><strong>${l.naam}</strong> – ${l.beschrijving}</li>`;
-                    });
-                    html += '</ul>';
-                    resultsDiv.innerHTML = html;
-                }
-            } catch (error) {
-                resultsDiv.innerHTML = '<p>Fout bij het laden van lokalen: ' + error.message + '</p>';
-            }
-        }
-
-        // Run search on page load
-        searchLokaal();
-    </script>
+    <script src="js/pages/lokaal-zoeken.js"></script>
+</body>
+</html>

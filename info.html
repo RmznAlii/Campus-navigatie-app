@@ -5,25 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/info.css">
 </head>
 <body>
-    <div class="app">
-        <header class="hero">
-            <button class="lang-btn" type="button">
+    <div class="app app-info">
+        <header class="hero hero-info">
+            <a class="info-back" href="index.html">&#8249; terug</a>
+            <h1 class="info-header-title">Gebouw info</h1>
+            <button class="lang-btn" type="button" aria-label="Selecteer taal">
                 <img src="IMG/icons/taal.png" alt="Taal" class="lang-icon">
                 <span>Taal</span>
             </button>
         </header>
 
-        <main class="content content-page">
-            <div class="hero-text">
-                <h1>Info</h1>
-            </div>
-            <section class="page-card">
-                <h2>Campus informatie</h2>
-                <p>Algemene informatie over openingstijden, faciliteiten en contactgegevens.</p>
+        <main class="content content-info">
+            <section class="info-panel">
+                <h2 class="info-building-name">Windesheim Circus</h2>
+                <hr class="info-divider">
+
+                <ul class="info-list">
+                    <li>2 verdiepingen</li>
+                    <li>Faciliteiten: kantine, studieruimtes en lokalen.</li>
+                    <li>Openingstijd: 7:30-18:30</li>
+                </ul>
+
+                <hr class="info-divider">
+
+                <h3 class="info-section-title">Informatie</h3>
+                <ul class="info-list info-list-bottom">
+                    <li>Wi-Fi: Windesheim WIFI</li>
+                    <li>3 nooduitgangen</li>
+                </ul>
             </section>
-            <a class="page-back" href="index.html">‹ Terug naar home</a>
         </main>
 
         <nav class="bottom-nav" aria-label="Onderste navigatie">
@@ -46,6 +59,5 @@
         </nav>
     </div>
 
-    <script src="js/script.js"></script>
 </body>
 </html>

@@ -38,6 +38,12 @@ body {
   height: 70%;
 }
 
+.hero-home {
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: linear-gradient(115deg, #f3ab1f 0%, #f3ab1f 26%, #f7cb05 26%, #f7cb05 63%, #e9e57e 63%, #e9e57e 100%);
+}
+
 .lang-btn {
   position: relative;
   z-index: 2;

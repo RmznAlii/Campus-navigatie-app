@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoek Lokaal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="hero">
+            <button class="lang-btn" type="button">
+                <img src="IMG/icons/taal.png" alt="Taal" class="lang-icon">
+                <span>Taal</span>
+            </button>
+        </header>
+
+        <main class="content content-page">
+            <div class="hero-text">
+                <h1>Zoek Lokaal</h1>
+            </div>
+            <section class="page-card">
+                <h2>Lokaal zoeken</h2>
+                <div id="search-results"></div>
+            </section>
+            <a class="page-back" href="index.html">‹ Terug naar home</a>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Onderste navigatie">
+            <a class="nav-item active" href="index.html" aria-current="page">
+                <img src="IMG/icons/navbar/home.png" alt="Home" class="nav-icon">
+                <small>Home</small>
+            </a>
+            <a class="nav-item" href="kaart.html">
+                <img src="IMG/icons/navbar/kaart.png" alt="Kaart" class="nav-icon">
+                <small>Kaart</small>
+            </a>
+            <a class="nav-item" href="route.html">
+                <img src="IMG/icons/navbar/route.png" alt="Route" class="nav-icon">
+                <small>Route</small>
+            </a>
+            <a class="nav-item" href="info.html">
+                <img src="IMG/icons/navbar/info.png" alt="Info" class="nav-icon">
+                <small>Info</small>
+            </a>
+        </nav>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Lokaal zoeken en resultaten weergeven
+        async function searchLokaal() {
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q')?.trim() || '';
+            const resultsDiv = document.getElementById('search-results');
+
+            if (!query) {
+                resultsDiv.innerHTML = '<p>Voer een lokaalnummer in om te zoeken.</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch('data/locaties.json');
+                const data = await response.json();
+                
+                const lokalen = data.lokalen;
+                const found = lokalen.filter(l => 
+                    l.naam.toLowerCase().includes(query.toLowerCase())
+                );
+
+                if (found.length === 0) {
+                    resultsDiv.innerHTML = `<p>Geen lokalen gevonden voor "<strong>${query}</strong>"</p>`;
+                } else if (found.length === 1) {
+                    const lokaal = found[0];
+                    resultsDiv.innerHTML = `
+                        <div style="margin-top: 12px;">
+                            <strong>${lokaal.naam}</strong><br>
+                            <small>${lokaal.beschrijving}</small>
+                        </div>
+                    `;
+                } else {
+                    let html = `<p>Gevonden: ${found.length} resultaten voor "<strong>${query}</strong>"</p>`;
+                    html += '<ul style="padding-left: 16px; margin: 8px 0;">';
+                    found.forEach(l => {
+                        html += `<li><strong>${l.naam}</strong> – ${l.beschrijving}</li>`;
+                    });
+                    html += '</ul>';
+                    resultsDiv.innerHTML = html;
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<p>Fout bij het laden van lokalen: ' + error.message + '</p>';
+            }
+        }
+
+        // Run search on page load
+        searchLokaal();
+    </script>

@@ -1,0 +1,338 @@
+.app-kaart {
+  grid-template-rows: 112px minmax(0, 1fr) 94px;
+  background: #ececec;
+  background-image: none;
+}
+
+.hero-kaart {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 112px;
+  padding: 16px 20px 14px;
+  background: linear-gradient(115deg, #4594D3 0%, #4594D3 24%, #1EBCC5 24%, #1EBCC5 70%, #8bd6da 70%, #8bd6da 100%);
+  overflow: visible;
+  z-index: 3;
+}
+
+.content-kaart {
+  padding: 0;
+  gap: 0;
+  display: block;
+  background: #ececec;
+  backdrop-filter: none;
+}
+
+.kaart-back {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1;
+  min-width: 66px;
+}
+
+.kaart-header-title {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-shadow: none;
+  margin: 0;
+}
+
+.app-kaart .lang-btn {
+  background: rgba(255, 255, 255, 0.96);
+  color: #767676;
+  box-shadow: none;
+  min-width: 92px;
+  justify-content: center;
+}
+
+.kaart-search-form {
+  display: grid;
+  grid-template-columns: minmax(0, 66%) auto;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.kaart-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #efefef;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  padding: 0 14px;
+}
+
+.kaart-search-icon {
+  width: 30px;
+  height: 30px;
+  opacity: 0.9;
+  filter: grayscale(100%) brightness(0.58);
+}
+
+.kaart-search-bar input {
+  flex: 1;
+  height: 58px;
+  border: none;
+  outline: none;
+  font-size: 0.97rem;
+  color: #666;
+  background: transparent;
+}
+
+.kaart-btn {
+  border: none;
+  border-radius: 999px;
+  background: #4594D3;
+  color: #fff;
+  font-weight: 700;
+  min-height: 58px;
+  padding: 0 20px;
+  font-size: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(69, 148, 211, 0.34);
+}
+
+.kaart-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.kaart-chip-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kaart-chip {
+  background: #efefef;
+  border: none;
+  color: #6b6b6b;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.kaart-chip svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #7e7e7e;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.kaart-chip button,
+.kaart-chip span {
+  line-height: 1;
+}
+
+.kaart-stage {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 0;
+  background: #dcdcdc;
+  touch-action: none;
+  cursor: grab;
+}
+
+.kaart-stage.panning {
+  cursor: grabbing;
+}
+
+.kaart-map-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: max-content;
+  height: max-content;
+  transform: translate(0, 0);
+  will-change: transform;
+}
+
+.kaart-image {
+  width: auto;
+  height: auto;
+  max-width: none;
+  display: block;
+  background: #efefef;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.kaart-marker {
+  position: absolute;
+  width: 28px;
+  height: 35px;
+  transform: translate(-50%, -100%);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.24));
+  z-index: 2;
+}
+
+.kaart-room-badge {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  z-index: 2;
+  border-radius: 12px;
+  background: #f2f2f2;
+  border: 1px solid #444;
+  color: #202020;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 9px 14px;
+  white-space: nowrap;
+}
+
+.kaart-marker-popup {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -112%);
+  background: #f3f3f3;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  min-width: 180px;
+  padding: 6px 10px 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.kaart-marker-popup-title {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #161616;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.kaart-marker-popup-btn {
+  width: 100%;
+  min-height: 32px;
+  border: none;
+  border-radius: 10px;
+  background: #49b875;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.kaart-overlay {
+  position: absolute;
+  inset: 10px 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 4;
+}
+
+.kaart-filter-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  background: rgba(239, 239, 239, 0.98);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 240px;
+}
+
+.kaart-filter-panel label {
+  font-size: 0.76rem;
+  color: #4f4f4f;
+  font-weight: 700;
+}
+
+.kaart-filter-panel select {
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.88rem;
+  padding: 8px 10px;
+}
+
+.kaart-filter-apply {
+  border: none;
+  border-radius: 999px;
+  background: #4594D3;
+  color: #fff;
+  font-weight: 700;
+  min-height: 36px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.app-kaart .bottom-nav {
+  background: #2cbac7;
+  padding: 0;
+  gap: 0;
+}
+
+.app-kaart .nav-item {
+  background: transparent;
+  padding: 11px 0 10px;
+}
+
+.app-kaart .nav-item.active {
+  background: #4a90d2;
+  border-radius: 0;
+}
+
+.app-kaart .nav-item small {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.72rem;
+}
+
+.app-kaart .nav-icon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 480px) {
+  .app-kaart {
+    grid-template-rows: 112px minmax(0, 1fr) 94px;
+  }
+
+  .hero-kaart {
+    height: 112px;
+    padding: 16px 18px 14px;
+  }
+
+  .kaart-search-form {
+    grid-template-columns: minmax(0, 64%) auto;
+  }
+
+  .kaart-btn {
+    min-height: 58px;
+    padding: 0 16px;
+    font-size: 0.96rem;
+  }
+
+  .kaart-search-bar input {
+    font-size: 0.96rem;
+  }
+
+  .kaart-chip {
+    font-size: 0.82rem;
+  }
+
+  .kaart-header-title {
+    font-size: 1.1rem;
+  }
+}

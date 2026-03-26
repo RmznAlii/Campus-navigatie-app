@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kaart.css">
+</head>
+<body>
+    <div class="app app-kaart">
+        <header class="hero hero-kaart">
+            <a class="kaart-back" href="index.html">&#8249; terug</a>
+            <h1 class="kaart-header-title">Campus map</h1>
+            <button class="lang-btn" type="button">
+                <img src="IMG/icons/taal.png" alt="Taal" class="lang-icon">
+                <span>Taal</span>
+            </button>
+        </header>
+
+        <main class="content content-page content-kaart">
+            <section class="kaart-stage" id="kaartStage">
+                <div class="kaart-map-layer" id="kaartMapLayer">
+                    <img id="kaartImage" class="kaart-image" src="IMG/plattegronden/AC1_NIEUW.png" alt="Plattegrond campus">
+                    <img id="kaartMarker" class="kaart-marker hidden" src="IMG/icons/cooordinaat_punt.png" alt="Locatiepunt van lokaal">
+                    <div id="kaartRoomBadge" class="kaart-room-badge hidden"></div>
+                    <div id="kaartMarkerPopup" class="kaart-marker-popup hidden" role="dialog" aria-live="polite">
+                        <p id="kaartMarkerPopupTitle" class="kaart-marker-popup-title">Lokaal</p>
+                        <button id="kaartStartRouteBtn" type="button" class="kaart-marker-popup-btn">Start route</button>
+                    </div>
+                </div>
+
+                <div class="kaart-overlay">
+                    <form id="kaartSearchForm" class="kaart-search-form">
+                        <div class="kaart-search-bar">
+                            <img src="IMG/icons/search.png" alt="Zoeken" class="kaart-search-icon">
+                            <input id="kaartSearchInput" name="q" type="search" placeholder="Find classroom..." autocomplete="off">
+                        </div>
+                        <button type="submit" class="kaart-btn">Vind route</button>
+                    </form>
+
+                    <div class="kaart-filter-row">
+                        <button class="kaart-chip" id="kaartFilterToggle" type="button" aria-expanded="false" aria-controls="kaartFilterPanel">
+                            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 5h18l-7 8v5l-4 2v-7L3 5z"></path>
+                            </svg>
+                            <span>Filter</span>
+                        </button>
+                        <div class="kaart-chip-group">
+                            <button class="kaart-chip" id="kaartGebouwChip" type="button" aria-label="Wissel gebouw">
+                                <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 20h16M7 20V8h10v12M9 8V5h6v3M9.5 11h1M13.5 11h1M9.5 14h1M13.5 14h1"></path>
+                                </svg>
+                                <span id="kaartGebouwValue">AC</span>
+                            </button>
+                            <button class="kaart-chip" id="kaartVerdiepingChip" type="button" aria-label="Wissel verdieping">
+                                <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 4l8 4-8 4-8-4 8-4zm8 8-8 4-8-4m16 4-8 4-8-4"></path>
+                                </svg>
+                                <span id="kaartVerdiepingValue">1</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="kaart-filter-panel hidden" id="kaartFilterPanel" aria-hidden="true">
+                        <label for="kaartGebouwSelect">Gebouw</label>
+                        <select id="kaartGebouwSelect"></select>
+                        <label for="kaartVerdiepingSelect">Verdieping</label>
+                        <select id="kaartVerdiepingSelect"></select>
+                        <button type="button" class="kaart-filter-apply" id="kaartFilterApply">Toepassen</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Onderste navigatie">
+            <a class="nav-item" href="index.html">
+                <img src="IMG/icons/navbar/home.png" alt="Home" class="nav-icon">
+                <small>Home</small>
+            </a>
+            <a class="nav-item active" href="kaart.html" aria-current="page">
+                <img src="IMG/icons/navbar/kaart.png" alt="Kaart" class="nav-icon">
+                <small>Kaart</small>
+            </a>
+            <a class="nav-item" href="route.html">
+                <img src="IMG/icons/navbar/route.png" alt="Route" class="nav-icon">
+                <small>Route</small>
+            </a>
+            <a class="nav-item" href="info.html">
+                <img src="IMG/icons/navbar/info.png" alt="Info" class="nav-icon">
+                <small>Info</small>
+            </a>
+        </nav>
+    </div>
+
+    <script src="js/pages/kaart.js"></script>
+</body>
+</html>

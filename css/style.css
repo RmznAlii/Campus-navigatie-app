@@ -38,6 +38,12 @@ body {
   height: 70%;
 }
 
+.hero-home {
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: linear-gradient(115deg, #f3ab1f 0%, #f3ab1f 26%, #f7cb05 26%, #f7cb05 63%, #e9e57e 63%, #e9e57e 100%);
+}
+
 .lang-btn {
   position: relative;
   z-index: 2;
@@ -67,7 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: none;
   z-index: 1;
 }
 
@@ -76,7 +82,7 @@ body {
   font-size: 2.5rem;
   font-weight: 900;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  text-shadow: none;
 }
 
 .card {
@@ -97,6 +103,16 @@ body {
   font-size: 1.2rem;
   margin: 0;
   color: #fff;
+}
+
+.card-go {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .card .card-icon {
@@ -145,6 +161,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
+  text-decoration: none;
 }
 
 .button-flex {
@@ -164,15 +181,15 @@ body {
 }
 
 .bottom-nav {
-  background: #ffca0b;
+  background: #f7c907;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  padding: 8px;
+  gap: 0;
+  padding: 0;
 }
 
 .nav-item {
-  background: rgb(255, 202, 11);
+  background: transparent;
   border: none;
   color: white;
   display: flex;
@@ -180,9 +197,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 10px 0;
+  padding: 11px 0 10px;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-icon {
@@ -192,12 +210,42 @@ body {
 }
 
 .nav-item.active {
-  background: #ff9802;
+  background: #f4a71e;
   color: #fff;
+  border-radius: 8px 8px 0 0;
 }
 
 .nav-item small {
   font-size: 0.72rem;
+}
+
+.content-page {
+  min-height: 280px;
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 14px;
+  padding: 16px;
+  color: #2a2a2a;
+}
+
+.page-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.page-card p {
+  line-height: 1.4;
+}
+
+.page-back {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 @media (max-width: 480px) {

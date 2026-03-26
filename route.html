@@ -100,7 +100,7 @@
                     + '<strong>Lokaal: ' + naam + '</strong>'
                     + '<small>' + getFloorLabel(naam) + '</small>'
                     + '</div>'
-                    + '<a class="btn-green" href="kaart.html?q=' + encodeURIComponent(naam) + '">Route</a>'
+                    + '<a class="btn-green" href="route-detail.html?q=' + encodeURIComponent(naam) + '">Route</a>'
                     + '</li>';
             }).join('');
         }
@@ -110,7 +110,7 @@
             var val = document.getElementById('routeInput').value.trim();
             if (!val) return;
             saveRecent(val);
-            window.location.href = 'kaart.html?q=' + encodeURIComponent(val);
+            window.location.href = 'route-detail.html?q=' + encodeURIComponent(val);
         });
 
         // TIJDELIJK: als geen localStorage, haal 3 willekeurige lokalen op uit locaties.json

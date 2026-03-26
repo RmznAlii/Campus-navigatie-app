@@ -215,7 +215,9 @@ async function initKaartPagina() {
 			return;
 		}
 
-		markerPopupTitle.innerHTML = 'Lokaal<br>' + String(lokaalNaam || '');
+		var naam = String(lokaalNaam || '').trim();
+		markerPopupTitle.innerHTML = 'Lokaal<br>' + naam;
+		markerPopup.setAttribute('data-lokaal', naam);
 		markerPopup.style.left = String(coordinaten.x) + '%';
 		markerPopup.style.top = String(Math.max(8, Number(coordinaten.y) - 4.5)) + '%';
 		markerPopup.classList.remove('hidden');
@@ -578,13 +580,16 @@ async function initKaartPagina() {
 		if (startRouteBtn) {
 			startRouteBtn.addEventListener('click', function(event) {
 				event.stopPropagation();
-				if (!activeLokaalNaam) {
+				var popupLokaalNaam = markerPopup ? String(markerPopup.getAttribute('data-lokaal') || '').trim() : '';
+				var lokaalNaam = popupLokaalNaam || String(activeLokaalNaam || '').trim();
+
+				if (!lokaalNaam) {
 					return;
 				}
 
-				saveRecentLokaal(activeLokaalNaam);
+				saveRecentLokaal(lokaalNaam);
 
-				window.location.href = 'route.html';
+				window.location.href = 'route-detail.html?q=' + encodeURIComponent(lokaalNaam);
 			});
 		}
 
@@ -605,6 +610,10 @@ async function initKaartPagina() {
 
 		stage.addEventListener('pointerdown', function(event) {
 			if (event.target.closest('.kaart-overlay')) {
+				return;
+			}
+
+			if (event.target.closest('#kaartMarkerPopup') || event.target.closest('#kaartMarker') || event.target.closest('#kaartRoomBadge')) {
 				return;
 			}
 

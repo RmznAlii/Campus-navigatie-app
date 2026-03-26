@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/route.css">
+</head>
+<body>
+    <div class="app app-route">
+
+        <header class="hero hero-route">
+            <a class="back-btn" href="index.html">&#8592; terug</a>
+            <h1 class="page-title">Route lokaal</h1>
+            <button class="lang-btn" type="button">
+                <img src="IMG/icons/taal.png" alt="Taal" class="lang-icon">
+                <span>Taal</span>
+            </button>
+        </header>
+
+        <main class="content content-route-bg">
+            <form class="route-search-form" id="routeForm">
+                <div class="route-search-bar">
+                    <img src="IMG/icons/search.png" alt="Zoek" class="search-icon-sm">
+                    <input type="text" id="routeInput" placeholder="Zoek lokaal..." autocomplete="off">
+                </div>
+                <button type="submit" class="btn-green">Vind route</button>
+            </form>
+
+            <div class="recent-section">
+                <p class="recent-label">Recent gezocht</p>
+                <hr class="recent-divider">
+                <ul class="recent-list" id="recentList"></ul>
+            </div>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Onderste navigatie">
+            <a class="nav-item" href="index.html">
+                <img src="IMG/icons/navbar/home.png" alt="Home" class="nav-icon">
+                <small>Home</small>
+            </a>
+            <a class="nav-item" href="kaart.html">
+                <img src="IMG/icons/navbar/kaart.png" alt="Kaart" class="nav-icon">
+                <small>Kaart</small>
+            </a>
+            <a class="nav-item active" href="route.html" aria-current="page">
+                <img src="IMG/icons/navbar/route.png" alt="Route" class="nav-icon">
+                <small>Route</small>
+            </a>
+            <a class="nav-item" href="info.html">
+                <img src="IMG/icons/navbar/info.png" alt="Info" class="nav-icon">
+                <small>Info</small>
+            </a>
+        </nav>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'recentRoutes';
+        const MAX_RECENT = 5;
+
+        function getFloorLabel(naam) {
+            const match = naam.match(/[A-Z]+(\d+)\./);
+            if (!match) return '';
+            const floor = parseInt(match[1]);
+            return floor === 0 ? 'Begane grond' : floor + 'e verdieping';
+        }
+
+        function getStoredRecent() {
+            try {
+                return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveRecent(naam) {
+            const recent = getStoredRecent().filter(function(r) { return r !== naam; });
+            recent.unshift(naam);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(recent.slice(0, MAX_RECENT)));
+        }
+
+        function capIcon() {
+            return '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+                + '<polygon points="12 2 22 8.5 12 15 2 8.5"/>'
+                + '<polyline points="6 11.5 6 18 12 21 18 18 18 11.5"/>'
+                + '</svg>';
+        }
+
+        function renderRecent(namen) {
+            var list = document.getElementById('recentList');
+            if (namen.length === 0) {
+                list.innerHTML = '<li class="recent-empty">Geen recente zoekopdrachten</li>';
+                return;
+            }
+            list.innerHTML = namen.map(function(naam) {
+                return '<li class="recent-item">'
+                    + '<div class="recent-item-icon">' + capIcon() + '</div>'
+                    + '<div class="recent-item-info">'
+                    + '<strong>Lokaal: ' + naam + '</strong>'
+                    + '<small>' + getFloorLabel(naam) + '</small>'
+                    + '</div>'
+                    + '<a class="btn-green" href="kaart.html?q=' + encodeURIComponent(naam) + '">Route</a>'
+                    + '</li>';
+            }).join('');
+        }
+
+        document.getElementById('routeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var val = document.getElementById('routeInput').value.trim();
+            if (!val) return;
+            saveRecent(val);
+            window.location.href = 'kaart.html?q=' + encodeURIComponent(val);
+        });
+
+        // TIJDELIJK: als geen localStorage, haal 3 willekeurige lokalen op uit locaties.json
+        async function init() {
+            var stored = getStoredRecent();
+            renderRecent(stored);
+        }
+
+        init();
+    </script>
+</body>
+</html>
